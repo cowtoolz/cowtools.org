@@ -3,15 +3,37 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>W. Turner Abney</title>
+        <title>William Abney</title>
+
+        <link rel="canonical" href="https://cowtools.org/" />
+        <meta name="description" content="Personal site for William Abney" />
     </head>
     <style>
         a {
             color: mediumpurple;
             text-decoration: none;
         }
+
         p {
             margin: 0;
+            + p {
+                text-indent: 2pc;
+            }
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+
+        .swap .long {
+            display: none;
+        }
+        .swap:hover .short {
+            display: none;
+        }
+        .swap:hover .long {
+            cursor: alias;
+            display: inline;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -29,33 +51,44 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            line-height: 1.5em;
             height: calc(200svh / 3);
-            text-align: justify;
+            line-height: 1.5em;
         "
     >
-        <div style="width: 48ex">
-            <h1>W. Turner Abney</h1>
+        <main style="width: 24pc">
+            <h1>
+                <abbr title="William" class="swap">
+                    <span class="short">W.</span>
+                    <span class="long">William</span>
+                </abbr>
+                <abbr title="Turner" class="swap">
+                    <span class="short">T.</span>
+                    <span class="long">Turner</span>
+                </abbr>
+                Abney
+            </h1>
             <p>
-                I work at
-                <a target="_blank" href="https://www.flowercomputer.com/"
+                I lead software R&amp;D at
+                <a
+                    href="https://www.flowercomputer.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
                     >Flower Computer</a
                 >
                 in Brooklyn, New York and study human factors at Arizona State
                 University, among other things.
             </p>
-            <p style="text-indent: 2em">
-                I am broadly interested in building performant distributed
-                systems that are easy to use. Software tooling is my primary
-                area of research, focusing on developer experience as a
+            <p>
+                I am broadly interested in building performant systems software
+                and software tooling, focusing on developer experience as a
                 first-class concern.
             </p>
             <br />
             <img
                 src="./email.svg"
-                alt="personal email address"
-                style="height: 1.75ex; vertical-align: middle"
+                alt="My personal email address, obfuscated to prevent spam."
+                style="height: 0.8pc; vertical-align: middle"
             />
-        </div>
+        </main>
     </body>
 </html>
